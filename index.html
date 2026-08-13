@@ -1,174 +1,448 @@
+
 <!DOCTYPE html>
-<h1>Xooni Transport Service in Riyadh</h1>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="description" content="Xooni Transport Service Riyadh provides reliable pickup transport services for goods and materials in Riyadh. Contact us for local pickup transport service.">
- <title>Xooni Transport Service Riyadh | Pickup Transport</title>
-<style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Arial,Helvetica,sans-serif;background:#0b0f14;color:#fff;line-height:1.6}
-  header{position:sticky;top:0;z-index:10;background:rgba(11,15,20,.94);border-bottom:1px solid #252c35}
-  nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-  .logo{font-size:21px;font-weight:800}.logo span{color:#f4b400}
-  nav a{color:#fff;text-decoration:none;margin-left:20px;font-size:14px}
-  .hero{min-height:78vh;display:flex;align-items:center;background:linear-gradient(120deg,#0b0f14 35%,#17202a);padding:60px 20px}
-  .hero-inner{max-width:1100px;margin:auto;width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-  .tag{display:inline-block;background:#f4b400;color:#111;padding:7px 12px;border-radius:20px;font-weight:700;font-size:13px;margin-bottom:18px}
-  h1{font-size:clamp(38px,6vw,68px);line-height:1.03;margin-bottom:18px}
-  h1 span{color:#f4b400}
-  .hero p{color:#cbd3dc;max-width:600px;font-size:18px;margin-bottom:28px}
-  .buttons{display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-block;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:800}
-  .primary{background:#f4b400;color:#111}.secondary{border:1px solid #5c6672;color:#fff}
-  .truck{height:330px;border-radius:24px;border:1px solid #343e49;background:radial-gradient(circle at 50% 35%,#303b47,#151b22 60%);display:flex;align-items:center;justify-content:center;font-size:110px}
-  section{padding:75px 20px}.container{max-width:1100px;margin:auto}
-  .title{text-align:center;margin-bottom:40px}.title h2{font-size:36px}.title p{color:#aeb8c3}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .card{background:#141a21;border:1px solid #28313b;border-radius:16px;padding:25px}
-  .icon{font-size:30px;margin-bottom:12px}.card h3{margin-bottom:8px}.card p{color:#adb7c1}
-  .about{background:#10151b}
-  .contact{background:#f4b400;color:#111;text-align:center}
-  .contact h2{font-size:38px;margin-bottom:10px}.contact p{margin-bottom:22px}
-  .contact .btn{background:#111;color:#fff}
-  footer{text-align:center;padding:22px;color:#7f8a96;font-size:13px}
-  @media(max-width:750px){
-    nav a{margin-left:10px;font-size:12px}
-    .hero-inner{grid-template-columns:1fr}.truck{height:230px;font-size:80px}
-    .cards{grid-template-columns:1fr}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Transport Service in Riyadh | Xooni</title>
+
+  <meta name="description" content="Transport Service in Riyadh by Xooni. Reliable pickup transport for goods and materials in Riyadh. Call or WhatsApp for transport service.">
+
+  <meta name="keywords" content="Transport Service in Riyadh, Pickup Transport Riyadh, Goods Transport Riyadh, Material Transport Riyadh, Xooni Transport">
+
+  <meta name="author" content="Xooni">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 20px;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.72),
+          rgba(0,0,0,0.88)
+        ),
+        url("car.jpg") center/cover no-repeat;
+    }
+
+    .hero {
+      max-width: 900px;
+    }
+
+    .brand {
+      color: #f5b400;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f5b400;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #dddddd;
+      margin-bottom: 30px;
+    }
+
+    /* BUTTONS */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .call {
+      background: #f5b400;
+      color: #000000;
+    }
+
+    .whatsapp {
+      background: #25d366;
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .title h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .title p {
+      color: #aaaaaa;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #161616;
+      padding: 30px 20px;
+      border-radius: 18px;
+      text-align: center;
+      border: 1px solid #292929;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #f5b400;
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #bbbbbb;
+    }
+
+    /* ABOUT */
+    .about {
+      background: #121212;
+      border-radius: 20px;
+      padding: 45px 30px;
+      text-align: center;
+      border: 1px solid #252525;
+    }
+
+    .about p {
+      color: #cccccc;
+      max-width: 800px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    .phone {
+      font-size: 30px;
+      font-weight: bold;
+      color: #f5b400;
+      margin: 20px 0 30px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050505;
+      text-align: center;
+      padding: 25px 15px;
+      color: #888888;
+    }
+
+    footer strong {
+      color: #ffffff;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .title h2 {
+        font-size: 28px;
+      }
+
+      .phone {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
+
+<!-- HERO SECTION -->
+
 <header>
-  <nav>
-    <div class="logo">NISSAN <span>TRANSPORT</span></div>
-    <div>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+
+  <div class="hero">
+
+    <div class="brand">
+      Xooni Transport
     </div>
-  </nav>
+
+    <h1>
+      Transport Service
+      <span>in Riyadh</span>
+    </h1>
+
+    <p>
+      Reliable Pickup Transport for Goods and Materials in Riyadh
+    </p>
+
+    <div class="buttons">
+
+      <a
+        class="btn call"
+        href="tel:+966568819206">
+        📞 Call Now
+      </a>
+
+      <a
+        class="btn whatsapp"
+        href="https://wa.me/966568819206?text=Hello%20Xooni%20Transport,%20I%20need%20transport%20service%20in%20Riyadh."
+        target="_blank">
+        💬 WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
 </header>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div>
-      <div class="tag">RIYADH • TRANSPORT SERVICE</div>
-      <h1>Reliable <span>Pickup</span> Transport</h1>
-      <p>Nissan Double Cabin transport service for moving goods, materials and equipment around Riyadh.</p>
-      <div class="buttons">
-        <a class="btn primary" href="#contact">Book Transport</a>
-        <a class="btn secondary" href="#services">View Services</a>
+
+<!-- SERVICES -->
+
+<section>
+
+  <div class="title">
+
+    <h2>
+      Transport Services in Riyadh
+    </h2>
+
+    <p>
+      Reliable local pickup transport services
+    </p>
+
+  </div>
+
+
+  <div class="services">
+
+
+    <div class="card">
+
+      <div class="icon">
+        🚚
       </div>
+
+      <h3>
+        Pickup Transport
+      </h3>
+
+      <p>
+        Reliable pickup transport service for local transportation in Riyadh.
+      </p>
+
     </div>
-    <div class="truck" aria-label="Nissan pickup illustration">🛻</div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        📦
+      </div>
+
+      <h3>
+        Goods Transport
+      </h3>
+
+      <p>
+        Transport service for suitable goods and loads around Riyadh.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        🧱
+      </div>
+
+      <h3>
+        Material Transport
+      </h3>
+
+      <p>
+        Pickup transport for materials and suitable transportation needs.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        📍
+      </div>
+
+      <h3>
+        Riyadh Transport
+      </h3>
+
+      <p>
+        Local transport service available across Riyadh.
+      </p>
+
+    </div>
+
+
   </div>
+
 </section>
 
-<section id="services">
-  <div class="container">
+
+<!-- ABOUT -->
+
+<section>
+
+  <div class="about">
+
     <div class="title">
-      <h2>Our Services</h2>
-      <p>Flexible pickup transport for everyday needs.</p>
+
+      <h2>
+        About Xooni Transport
+      </h2>
+
     </div>
-    <div class="cards">
-      <div class="card"><div class="icon">📦</div><h3>Goods Transport</h3><p>Transport boxes, supplies and general goods safely around Riyadh.</p></div>
-      <div class="card"><div class="icon">🏗️</div><h3>Material Transport</h3><p>Useful for construction materials, tools and work-site supplies.</p></div>
-      <div class="card"><div class="icon">🚚</div><h3>Pickup Service</h3><p>Double cabin pickup available for local transport and delivery jobs.</p></div>
-    </div>
+
+    <p>
+      Xooni provides pickup transport service in Riyadh
+      for goods, materials and suitable local transportation needs.
+      Contact us by phone or WhatsApp for transport service in Riyadh.
+    </p>
+
   </div>
+
 </section>
 
-<section id="about" class="about">
-  <div class="container">
-    <div class="title">
-      <h2>Why Choose Us?</h2>
-      <p>Simple, direct and dependable transport service.</p>
-    </div>
-    <div class="cards">
-      <div class="card"><h3>📍 Riyadh</h3><p>Serving customers across Riyadh and surrounding areas.</p></div>
-      <div class="card"><h3>⏱️ Flexible</h3><p>Contact us to discuss your pickup, delivery and timing needs.</p></div>
-      <div class="card"><h3>🛻 Nissan Double Cabin</h3><p>A practical pickup for many transport and delivery jobs.</p></div>
-    </div>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+  <div class="title">
+
+    <h2>
+      Need Transport in Riyadh?
+    </h2>
+
+    <p>
+      Contact us today for pickup transport service.
+    </p>
+
   </div>
-</section>
 
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Need Transport?</h2>
-    <section class="contact">
-  <h2>Need Transport in Riyadh?</h2>
-  <p>Available for transport service in Riyadh</p>
 
-  <div class="contact-buttons">
-    <a class="call-btn" href="tel:+966568819206">
-      📞 Call Now
+  <div class="phone">
+    📞 0568819206
+  </div>
+
+
+  <div class="buttons">
+
+    <a
+      class="btn call"
+      href="tel:+966568819206">
+      Call 0568819206
     </a>
 
-    <a class="whatsapp-btn" href="https://wa.me/966568819206" target="_blank">
-      💬 WhatsApp
+
+    <a
+      class="btn whatsapp"
+      href="https://wa.me/966568819206?text=Hello,%20I%20need%20transport%20service%20in%20Riyadh."
+      target="_blank">
+      WhatsApp Us
     </a>
+
   </div>
 
-  <p class="phone">+966 56 881 9206</p>
 </section>
 
-<style>
-.contact {
-  text-align: center;
-  padding: 40px 20px;
-  border-radius: 20px;
-  background: #111827;
-  margin: 30px auto;
-  max-width: 700px;
-}
 
-.contact h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  color: #cbd5e1;
-}
-
-.contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 25px 0;
-}
-
-.contact-buttons a {
-  padding: 14px 28px;
-  border-radius: 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.call-btn {
-  background: #2563eb;
-}
-
-.whatsapp-btn {
-  background: #16a34a;
-}
-
-.phone {
-  font-size: 20px;
-  font-weight: bold;
-}
-</style>
-    
-  </div>
-</section>
+<!-- FOOTER -->
 
 <footer>
-  © xooni Transport Service • Riyadh, Saudi Arabia
+
+  © 2026
+  <strong>
+    Transport Service in Riyadh
+  </strong>
+
+  <br>
+
+  Pickup Transport • Goods Transport • Riyadh
+
 </footer>
+
 
 </body>
 </html>
