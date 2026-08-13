@@ -1,688 +1,931 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Transport Service in Riyadh | Xooni</title>
-
-  <meta name="description" content="Transport Service in Riyadh by Xooni. Reliable pickup transport for goods and materials in Riyadh. Call or WhatsApp for transport service.">
-
-  <meta name="keywords" content="Transport Service in Riyadh, Pickup Transport Riyadh, Goods Transport Riyadh, Material Transport Riyadh, Xooni Transport">
-
-  <meta name="author" content="Xooni">
-
-  <style>
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #080808;
-      color: white;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    header {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px 20px;
-
-      background:
-        linear-gradient(
-          rgba(0,0,0,0.70),
-          rgba(0,0,0,0.90)
-        ),
-        url("car.jpg") center/cover no-repeat;
-
-      position: relative;
-    }
-
-    .hero {
-      max-width: 900px;
-      animation: heroFade 1.5s ease forwards;
-    }
-
-    .brand {
-      color: #f5b400;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-
-      animation: slideDown 1s ease forwards;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.15;
-      margin-bottom: 20px;
-
-      animation: slideUp 1.2s ease forwards;
-    }
-
-    .hero h1 span {
-      color: #f5b400;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #dddddd;
-      margin-bottom: 30px;
-
-      animation: slideUp 1.5s ease forwards;
-    }
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      position: relative;
-    }
-
-    .call {
-      background: #f5b400;
-      color: #000000;
-
-      animation: buttonAppear 2s ease forwards;
-    }
-
-    .whatsapp {
-      background: #25d366;
-      color: white;
-
-      animation: buttonAppear 2.2s ease forwards;
-    }
-
-    .btn:hover {
-      transform: translateY(-5px) scale(1.05);
-    }
-
-    /* WhatsApp pulse */
-
-    .whatsapp {
-      animation:
-        buttonAppear 2.2s ease forwards,
-        whatsappPulse 2.5s infinite;
-    }
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 45px;
-
-      animation: slideUp 1s ease;
-    }
-
-    .title h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .title p {
-      color: #aaaaaa;
-    }
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-      display: grid;
-      grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-
-      gap: 22px;
-    }
-
-    .card {
-      background: #151515;
-      padding: 32px 20px;
-      border-radius: 18px;
-      text-align: center;
-
-      border: 1px solid #292929;
-
-      transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-
-      animation: cardAppear 1s ease forwards;
-    }
-
-    .card:hover {
-      transform:
-        translateY(-12px)
-        scale(1.03);
-
-      box-shadow:
-        0 15px 35px
-        rgba(245,180,0,0.18);
-    }
-
-    .icon {
-      font-size: 44px;
-      margin-bottom: 15px;
-
-      transition: transform 0.4s ease;
-    }
-
-    .card:hover .icon {
-      transform:
-        scale(1.2)
-        rotate(5deg);
-    }
-
-    .card h3 {
-      color: #f5b400;
-      margin-bottom: 10px;
-      font-size: 21px;
-    }
-
-    .card p {
-      color: #bbbbbb;
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      background: #121212;
-      border-radius: 20px;
-      padding: 45px 30px;
-      text-align: center;
-
-      border: 1px solid #252525;
-
-      animation: aboutAppear 1.2s ease;
-    }
-
-    .about p {
-      color: #cccccc;
-      max-width: 800px;
-      margin: auto;
-      font-size: 17px;
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      text-align: center;
-    }
-
-    .phone {
-      font-size: 30px;
-      font-weight: bold;
-
-      color: #f5b400;
-
-      margin: 20px 0 30px;
-
-      animation: phoneGlow 2s infinite;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #050505;
-      text-align: center;
-      padding: 25px 15px;
-      color: #888888;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-    /* =========================
-       ANIMATIONS
-    ========================= */
-
-    @keyframes heroFade {
-
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-    }
-
-    @keyframes slideUp {
-
-      from {
-        opacity: 0;
-        transform: translateY(35px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-    }
-
-    @keyframes slideDown {
-
-      from {
-        opacity: 0;
-        transform: translateY(-25px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-    }
-
-    @keyframes buttonAppear {
-
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-    }
-
-    @keyframes cardAppear {
-
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-    }
-
-    @keyframes aboutAppear {
-
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-    }
-
-    @keyframes whatsappPulse {
-
-      0% {
-        box-shadow: 0 0 0 0
-        rgba(37,211,102,0.45);
-      }
-
-      70% {
-        box-shadow: 0 0 0 12px
-        rgba(37,211,102,0);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0
-        rgba(37,211,102,0);
-      }
-
-    }
-
-    @keyframes phoneGlow {
-
-      0%,100% {
-        text-shadow:
-          0 0 5px
-          rgba(245,180,0,0.2);
-      }
-
-      50% {
-        text-shadow:
-          0 0 18px
-          rgba(245,180,0,0.55);
-      }
-
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 600px) {
-
-      .hero h1 {
-        font-size: 36px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      .title h2 {
-        font-size: 28px;
-      }
-
-      .phone {
-        font-size: 24px;
-      }
-
-      .btn {
-        width: 90%;
-        max-width: 300px;
-      }
-
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Xooni Transport | Transport Service in Riyadh</title>
+
+<meta name="description" content="Xooni Transport provides pickup, goods, furniture and material transport service in Riyadh. Call or WhatsApp 0568819206.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#08040f;
+  color:white;
+  overflow-x:hidden;
+}
+
+:root{
+  --gold:#ffc84a;
+  --purple:#9b5cff;
+  --green:#25d366;
+}
+
+/* NAVIGATION */
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:50;
+  padding:15px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#08060ddd;
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #ffc84a33;
+}
+
+.logo{
+  font-weight:800;
+  font-size:20px;
+  color:var(--gold);
+}
+
+.tag{
+  font-size:11px;
+  color:#ddd;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+.calltop{
+  background:linear-gradient(135deg,#ffe083,#d89100);
+  color:#160e00!important;
+  padding:11px 18px;
+  border-radius:25px;
+  font-weight:800;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  padding:140px 7% 70px;
+  display:grid;
+  grid-template-columns:1fr 1.15fr;
+  align-items:center;
+  gap:35px;
+
+  background:
+  linear-gradient(90deg,#08040fee,#19062a88),
+  url("hero.jpg") center/cover fixed;
+
+  position:relative;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(circle at 80% 45%,#ffc84a33,transparent 35%),
+  radial-gradient(circle at 20% 80%,#9b5cff33,transparent 30%);
+
+  pointer-events:none;
+}
+
+.hero>*{
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font:italic 18px Georgia,serif;
+}
+
+.hero h1{
+  font:clamp(48px,7vw,82px)/.98 Georgia,serif;
+  color:#ffd15a;
+  text-shadow:0 0 25px #ffc84a4d;
+}
+
+.hero h2{
+  font:30px Georgia,serif;
+  margin:20px 0 10px;
+}
+
+.hero p{
+  color:#ddd;
+  max-width:520px;
+  font-size:18px;
+}
+
+.btns{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  padding:15px 25px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  display:inline-block;
+  transition:.35s;
+}
+
+.btn:hover{
+  transform:translateY(-5px) scale(1.03);
+}
+
+.gold{
+  background:linear-gradient(135deg,#ffe083,#e8a515);
+  color:#160e00;
+}
+
+.wa{
+  border:1px solid var(--gold);
+  color:white;
+  background:#0007;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:24px;
+  bottom:25px;
+  z-index:60;
+
+  width:76px;
+  height:76px;
+
+  border-radius:50%;
+
+  display:grid;
+  place-items:center;
+
+  background:var(--green);
+
+  font-size:39px;
+  text-decoration:none;
+
+  animation:pulse 2.2s infinite;
+}
+
+.whatsapp:after{
+  content:"🦋";
+  position:absolute;
+  font-size:21px;
+  right:-10px;
+  top:-8px;
+
+  animation:fly 2s infinite;
+}
+
+/* FEATURE STRIP */
+.strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  background:#14091fee;
+
+  border-block:1px solid #ffc84a2e;
+}
+
+.feature{
+  padding:27px 15px;
+  text-align:center;
+  border-right:1px solid #ffffff12;
+}
+
+.feature b{
+  display:block;
+  margin-bottom:6px;
+}
+
+.feature span{
+  color:#aaa;
+  font-size:14px;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 7%;
+  max-width:1400px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title small{
+  color:var(--gold);
+  font-weight:800;
+}
+
+.section-title h2{
+  font:42px Georgia,serif;
+  margin-top:8px;
+}
+
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about p{
+  color:#ccc;
+  font-size:17px;
+}
+
+.checks{
+  list-style:none;
+  margin:20px 0;
+}
+
+.checks li{
+  margin:11px 0;
+}
+
+.checks li:before{
+  content:"✓";
+  color:var(--gold);
+  font-weight:bold;
+  margin-right:12px;
+}
+
+.about-img{
+  width:100%;
+  border-radius:22px;
+  border:1px solid #ffc84a80;
+  box-shadow:0 0 35px #9b5cff2e;
+}
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+  margin-top:35px;
+}
+
+.stat{
+  padding:25px;
+  text-align:center;
+  border:1px solid #ffc84a40;
+  border-radius:16px;
+  background:#ffffff09;
+}
+
+.stat strong{
+  display:block;
+  color:var(--gold);
+  font:32px Georgia,serif;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.card{
+  padding:30px 20px;
+  text-align:center;
+
+  background:#ffffff09;
+
+  border:1px solid #ffc84a33;
+  border-radius:18px;
+
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:var(--gold);
+  box-shadow:0 15px 35px #9b5cff2e;
+}
+
+.icon{
+  font-size:40px;
+}
+
+.card h3{
+  color:var(--gold);
+  margin:12px 0 7px;
+}
+
+.card p{
+  color:#aaa;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+
+  background:
+  linear-gradient(#14051dcc,#08040ff2),
+  url("hero.jpg") center/cover;
+
+  border-radius:25px;
+  margin-bottom:60px;
+}
+
+.phone{
+  font-size:35px;
+  color:var(--gold);
+  font-weight:800;
+  margin:20px;
+}
+
+/* FOOTER */
+footer{
+  padding:45px 7%;
+  background:#05030a;
+  color:#999;
+
+  display:grid;
+  grid-template-columns:1.2fr 1fr 1fr 1fr;
+  gap:35px;
+}
+
+footer h3{
+  color:white;
+  margin-bottom:14px;
+}
+
+footer a{
+  display:block;
+  color:#aaa;
+  text-decoration:none;
+  margin:8px 0;
+}
+
+footer a:hover{
+  color:var(--gold);
+}
+
+.copy{
+  grid-column:1/-1;
+  border-top:1px solid #222;
+  padding-top:20px;
+  text-align:center;
+}
+
+/* ANIMATIONS */
+@keyframes pulse{
+
+  0%,100%{
+    box-shadow:0 0 0 0 #25d36677;
+  }
+
+  50%{
+    box-shadow:0 0 0 16px #25d36600;
+  }
+}
+
+@keyframes fly{
+
+  0%,100%{
+    transform:translate(0) rotate(-12deg);
+  }
+
+  50%{
+    transform:translate(-8px,-14px) rotate(18deg);
+  }
+}
+
+/* MOBILE */
+@media(max-width:850px){
+
+  nav .links{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero p{
+    margin:auto;
+  }
+
+  .btns{
+    justify-content:center;
+  }
+
+  .strip,
+  .services,
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  footer{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:520px){
+
+  .strip,
+  .services,
+  .stats,
+  footer{
+    grid-template-columns:1fr;
+  }
+
+  .feature{
+    border-right:0;
+    border-bottom:1px solid #ffffff12;
+  }
+
+  .whatsapp{
+    width:65px;
+    height:65px;
+    font-size:32px;
+  }
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 
-<!-- =========================
-     HERO
-========================= -->
+<nav>
 
-<header>
+<div>
+  <div class="logo">🚚 Xooni Transport</div>
+  <div class="tag">Your Trust, Our Responsibility</div>
+</div>
 
-  <div class="hero">
+<div class="links">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#about">About Us</a>
+  <a href="#contact">Contact</a>
+</div>
 
-    <div class="brand">
-      XOONI TRANSPORT
-    </div>
+<a class="calltop" href="tel:+966568819206">
+📞 Call Now
+</a>
 
-    <h1>
-      Transport Service
-      <span>in Riyadh</span>
-    </h1>
-
-    <p>
-      Reliable Pickup Transport for Goods and Materials in Riyadh
-    </p>
-
-    <div class="buttons">
-
-      <a
-        class="btn call"
-        href="tel:+966568819206">
-
-        📞 Call Now
-
-      </a>
+</nav>
 
 
-      <a
-        class="btn whatsapp"
-        href="https://wa.me/966568819206?text=Hello%20Xooni%20Transport,%20I%20need%20transport%20service%20in%20Riyadh."
-        target="_blank">
+<!-- FLOATING WHATSAPP -->
 
-        💬 WhatsApp
+<a
+class="whatsapp"
+href="https://wa.me/966568819206"
+target="_blank">
+☏
+</a>
 
-      </a>
 
-    </div>
+<!-- HERO -->
 
-  </div>
+<header class="hero" id="home">
+
+<div>
+
+<div class="eyebrow">
+Welcome To
+</div>
+
+<h1>
+Xooni Transport
+</h1>
+
+<h2>
+Transport Service in Riyadh
+</h2>
+
+<p>
+
+<b>Safe • Fast • Reliable</b>
+
+<br><br>
+
+We provide pickup transport services
+for goods, furniture, material and more
+anywhere in Riyadh.
+
+</p>
+
+<div class="btns">
+
+<a
+class="btn gold"
+href="tel:+966568819206">
+📞 Call Now
+</a>
+
+<a
+class="btn wa"
+href="https://wa.me/966568819206"
+target="_blank">
+💬 Chat on WhatsApp
+</a>
+
+</div>
+
+</div>
 
 </header>
 
 
-<!-- =========================
-     SERVICES
-========================= -->
+<!-- FEATURES -->
 
-<section>
+<div class="strip">
 
-  <div class="title">
+<div class="feature">
+⏱️
+<b>24/7 Service</b>
+<span>Available when you need us</span>
+</div>
 
-    <h2>
-      Transport Services in Riyadh
-    </h2>
+<div class="feature">
+🚚
+<b>Fast Delivery</b>
+<span>On time service</span>
+</div>
 
-    <p>
-      Reliable local pickup transport services
-    </p>
+<div class="feature">
+💰
+<b>Best Rates</b>
+<span>Affordable prices</span>
+</div>
 
-  </div>
+<div class="feature">
+⭐
+<b>Trusted Service</b>
+<span>Your satisfaction matters</span>
+</div>
 
-
-  <div class="services">
-
-
-    <div class="card">
-
-      <div class="icon">
-        🚚
-      </div>
-
-      <h3>
-        Pickup Transport
-      </h3>
-
-      <p>
-        Reliable pickup transport service
-        for local transportation in Riyadh.
-      </p>
-
-    </div>
+</div>
 
 
-    <div class="card">
+<!-- ABOUT -->
 
-      <div class="icon">
-        📦
-      </div>
+<section id="about">
 
-      <h3>
-        Goods Transport
-      </h3>
+<div class="section-title">
 
-      <p>
-        Transport service for suitable goods
-        and loads around Riyadh.
-      </p>
+<small>
+ABOUT OUR SERVICE
+</small>
 
-    </div>
+<h2>
+We Make Transport Easy For You
+</h2>
 
-
-    <div class="card">
-
-      <div class="icon">
-        🧱
-      </div>
-
-      <h3>
-        Material Transport
-      </h3>
-
-      <p>
-        Pickup transport for materials
-        and suitable transportation needs.
-      </p>
-
-    </div>
+</div>
 
 
-    <div class="card">
+<div class="about">
 
-      <div class="icon">
-        📍
-      </div>
+<div>
 
-      <h3>
-        Riyadh Transport
-      </h3>
+<p>
 
-      <p>
-        Local transport service available
-        across Riyadh.
-      </p>
+We are a reliable transport service provider
+in Riyadh. Our pickup is ready to serve
+suitable transport needs across the city.
 
-    </div>
+</p>
 
 
-  </div>
+<ul class="checks">
 
-</section>
+<li>Goods Transport</li>
+
+<li>Furniture Transport</li>
+
+<li>Material Transport</li>
+
+<li>House Shifting</li>
+
+<li>Riyadh Local Transport</li>
+
+</ul>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<a
+class="btn gold"
+href="#contact">
+More About Us →
+</a>
 
-<section>
+</div>
 
-  <div class="about">
 
-    <div class="title">
+<img
+class="about-img"
+src="hero.jpg"
+alt="Xooni Transport pickup in Riyadh">
 
-      <h2>
-        About Xooni Transport
-      </h2>
+</div>
 
-    </div>
 
-    <p>
-      Xooni provides pickup transport service
-      in Riyadh for goods, materials and
-      suitable local transportation needs.
-      Contact us by phone or WhatsApp
-      for transport service in Riyadh.
-    </p>
+<!-- STATS -->
 
-  </div>
+<div class="stats">
+
+<div class="stat">
+<strong>500+</strong>
+Happy Customers
+</div>
+
+<div class="stat">
+<strong>1000+</strong>
+Successful Deliveries
+</div>
+
+<div class="stat">
+<strong>Riyadh</strong>
+Serving All Areas
+</div>
+
+<div class="stat">
+<strong>5.0</strong>
+Customer Rating
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- SERVICES -->
 
-<section class="contact">
+<section id="services">
 
-  <div class="title">
+<div class="section-title">
 
-    <h2>
-      Need Transport in Riyadh?
-    </h2>
+<small>
+WHAT WE DO
+</small>
 
-    <p>
-      Contact us today for pickup transport service.
-    </p>
+<h2>
+Our Services
+</h2>
 
-  </div>
+</div>
 
 
-  <div class="phone">
+<div class="services">
 
-    📞 0568819206
+<div class="card">
 
-  </div>
+<div class="icon">
+📦
+</div>
+
+<h3>
+Goods Transport
+</h3>
+
+<p>
+Local pickup transport for suitable goods.
+</p>
+
+</div>
 
 
-  <div class="buttons">
+<div class="card">
 
-    <a
-      class="btn call"
-      href="tel:+966568819206">
+<div class="icon">
+🛋️
+</div>
 
-      Call 0568819206
+<h3>
+Furniture Transport
+</h3>
 
-    </a>
+<p>
+Convenient transport for furniture
+and household items.
+</p>
+
+</div>
 
 
-    <a
-      class="btn whatsapp"
-      href="https://wa.me/966568819206?text=Hello,%20I%20need%20transport%20service%20in%20Riyadh."
-      target="_blank">
+<div class="card">
 
-      WhatsApp Us
+<div class="icon">
+🧱
+</div>
 
-    </a>
+<h3>
+Material Transport
+</h3>
 
-  </div>
+<p>
+Pickup transport for suitable materials
+and loads.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🏠
+</div>
+
+<h3>
+House Shifting
+</h3>
+
+<p>
+Local moving and pickup transport
+support in Riyadh.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact">
+
+<div class="section-title">
+
+<small>
+CONTACT US
+</small>
+
+<h2>
+Need Transport in Riyadh?
+</h2>
+
+</div>
+
+
+<div class="phone">
+0568819206
+</div>
+
+
+<div
+class="btns"
+style="justify-content:center;padding-bottom:55px">
+
+<a
+class="btn gold"
+href="tel:+966568819206">
+📞 Call 0568819206
+</a>
+
+<a
+class="btn wa"
+href="https://wa.me/966568819206"
+target="_blank">
+💬 WhatsApp Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-  © 2026
+<div>
 
-  <strong>
-    Transport Service in Riyadh
-  </strong>
+<h3>
+🚚 Xooni Transport
+</h3>
 
-  <br>
+<p>
+Your Trust, Our Responsibility
+</p>
 
-  Pickup Transport • Goods Transport • Riyadh
+<p>
+Safe, fast and reliable transport
+service in Riyadh.
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Quick Links
+</h3>
+
+<a href="#home">
+Home
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#about">
+About Us
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+Our Services
+</h3>
+
+<a href="#services">
+Goods Transport
+</a>
+
+<a href="#services">
+Furniture Transport
+</a>
+
+<a href="#services">
+Material Transport
+</a>
+
+<a href="#services">
+House Shifting
+</a>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact Us
+</h3>
+
+<p>
+📞 0568819206
+</p>
+
+<p>
+📍 Riyadh, Saudi Arabia
+</p>
+
+<a href="https://wa.me/966568819206">
+💬 Chat on WhatsApp
+</a>
+
+</div>
+
+
+<div class="copy">
+
+© 2026 Xooni Transport.
+All Rights Reserved.
+
+</div>
 
 </footer>
-
 
 </body>
 </html>
